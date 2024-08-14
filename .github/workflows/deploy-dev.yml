@@ -1,12 +1,13 @@
 name: Deploy Dev
 run-name: ${{ github.actor }} is deploying dev branch
 on:
-  push:
-    branches:
-      - "dev"
+  # push:
+  #   branches:
+  #     - "dev"
   workflow_run:
     workflows: ['Prepare Deployment for all branches']
     types: [completed]
+    branches: [dev]
 jobs:
   Deploy:
     runs-on: ubuntu-latest
