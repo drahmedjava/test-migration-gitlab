@@ -3,7 +3,8 @@ run-name: ${{ github.actor }} is preparing deployment
 on: [push]
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]
     steps:
       - run: date
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
