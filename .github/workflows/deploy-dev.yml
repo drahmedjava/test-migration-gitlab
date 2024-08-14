@@ -10,7 +10,9 @@ on:
     branches: [dev]
 jobs:
   Deploy:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]
     steps:
       - run: echo 'only for dev'
       - run: date
+      - run: hostname
